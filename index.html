@@ -3,31 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Home - Keerthanadevi</title>
+    <title>Portfolio-Keerthanadevi</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesom.com/aa5f332820.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+   <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="navbar">
         <div class="container">
             <div class="profile-container">
-                <!-- Profile picture near the logo/title -->
-                <img src="prof.jpg.jpg" alt="Profile Picture" class="profile-pic">
-                <h2 class="logo">Keerthanadevi</h2>
+                <img src="prof.jpg.jpg" alt="Profile" class="profile-pic">
+                <div class="logo">KEERTHANADEVI</div>
             </div>
-            <ul class="nav-menu">
+            <button class="menu-toggle">☰</button> <!-- Menu toggle button -->
+            <ul class="nav-menu hidden"> <!-- Initially hidden on mobile -->
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-    <!-- Home Section -->
+    // Toggle the menu visibility when the menu button is clicked
+    menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('show'); // Toggle the show class
+    });
+
+    // Close the menu when a link is clicked
+    navMenu.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+            navMenu.classList.remove('show'); // Hide the menu after selection
+        }
+    });
+});
+
+
+    </script>
+        <!-- Home Section -->
     <section id="home" class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -36,13 +58,7 @@
             <h2>WEB DEVELOPER</h2>
             <a href="#about" class="btn">Get started</a>
         </div>
-        <div class="social-icons">
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </section>
+           </section>
 
     <section id="about" class="about-section"><br><br><br>
         <h2>About Me</h2>
@@ -55,7 +71,7 @@
             
             </p>
         </div>
-        <a href="" class="btn">Download CV</a>
+        <a href="F:\lokesh\Keerthanadevi s(resume)_" class="btn">Download CV</a>
         
     </section>
     
@@ -162,19 +178,8 @@
         </div>
     </section>
 
-    <script>
-        // Function to toggle the contact form visibility
-        function toggleForm() {
-            var form = document.getElementById('contactForm');
-            if (form.style.display === "none" || form.style.display === "") {
-                form.style.display = "block";
-            } else {
-                form.style.display = "none";
-            }
-        }
-    </script>
-            <!-- FontAwesome CDN for icons -->
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+    
     </section>
 </body>
 </html>
