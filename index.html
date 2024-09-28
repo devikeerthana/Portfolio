@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Keerthanadevi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+   <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="navbar">
+        <div class="container">
+            <div class="profile-container">
+                <img src="prof.jpg.jpg" alt="Profile" class="profile-pic">
+                <div class="logo">KEERTHANADEVI</div>
+            </div>
+            <button class="menu-toggle">☰</button> <!-- Menu toggle button -->
+            <ul class="nav-menu hidden"> <!-- Initially hidden on mobile -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Toggle the menu visibility when the menu button is clicked
+    menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('show'); // Toggle the show class
+    });
+
+    // Close the menu when a link is clicked
+    navMenu.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+            navMenu.classList.remove('show'); // Hide the menu after selection
+        }
+    });
+});
+
+
+    </script>
+        <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <p>Hi I am</p>
+            <h1>KEERTHANADEVI</h1>
+            <h2>WEB DEVELOPER</h2>
+            <a href="#about" class="btn">Get started</a>
+        </div>
+           </section>
+
+    <section id="about" class="about-section"><br><br><br>
+        <h2>About Me</h2>
+        <img src="prof.jpg.jpg" alt="Profile Picture">
+        <div class="about-content">
+            
+            <p>Hello! I’m Keerthanadevi, a passionate web developer with a knack for creating dynamic and user-friendly websites. With a solid foundation in both front-end and back-end development, I strive to deliver seamless digital experiences that not only meet client needs but also engage and captivate users.
+            
+            In my previous roles, I have successfully collaborated with cross-functional teams to deliver high-quality web solutions. I thrive in fast-paced environments and am dedicated to continuously improving my skills and staying up-to-date with industry trends.
+            
+            </p>
+        </div>
+        <a href="keerthanadevi(resume).png" class="btn">Download CV</a>
+        
+    </section>
+    
+
+    <div class="main-container" style="display: flex;">
+        
+        <!-- Left side description box -->
+        <div class="description-box" style="width: 40%; padding-top: 20%; border-right: 1px solid #ccc;">
+            <h2>Skill Description</h2>
+            <p id="description-text">Hover over a skill to see the description here.</p>
+        </div>
+
+        <!-- Skills Section (right side) -->
+        <section id="skills" class="skills-section" style="width: 60%; padding-top: 5%;"><br><br>
+            <h2> Skills</h2>
+            <div class="skills-container">
+                <div class="skill" onmouseover="showDescription('Proficient in creating responsive and structured web pages using HTML and CSS with a deep understanding of best practices.')">
+                    <div class="skill-name">HTML AND CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 95%;">95%</div>
+                    </div>
+                </div>
+
+                <div class="skill" onmouseover="showDescription('Experienced in developing object-oriented applications, utilizing Java\'s robust libraries and frameworks.')">
+                    <div class="skill-name">JAVA</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill" onmouseover="showDescription('Good knowledge of JavaScript for enhancing interactivity and creating dynamic web applications.')">
+                    <div class="skill-name">JAVASCRIPT</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+
+                <div class="skill" onmouseover="showDescription('Proficient in Python for scripting, data analysis, and web development using frameworks like Django and Flask.')">
+                    <div class="skill-name">PYTHON</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showDescription(text) {
+            document.getElementById("description-text").textContent = text;
+        }
+    </script>
+    </section>
+
+   <!-- Projects Section -->
+<section id="projects">
+    <br><br>
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <img src="validation.png.png" alt="Validation Form">
+            <h3>Validation Form</h3>
+            <p>This form is designed to provide a clean and user-friendly interface for collecting and validating user inputs such as name, email, password, and message.</p>
+        </div>
+    </div>
+    <!-- View button (should be inside the section) -->
+    <div class="view-btn-container">
+        <a href="https://devikeerthana.github.io/Task5/" class="button">View</a>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section"></section>
+        <div class="contact-section">
+            <h2>Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+            <div class="contact-details">
+                <!-- Address -->
+                <div class="contact-item">
+                    <h4>Address</h4>
+                    <p>1/14, Muthaiya Nagar, Elumalai, Madurai dt, 625535</p>
+                </div>
+                <!-- Contact Number -->
+                <div class="contact-item">
+                    <h4>Contact Number</h4>
+                    <p>8525068784</p>
+                </div>
+                <!-- Email Address -->
+                <div class="contact-item">
+                    <h4>Email Address</h4>
+                    <p>keerthanadevi032003@gmail.com</p>
+                </div>
+            </div>
+            <!-- Hidden Contact Form -->
+            <div class="contact-form" id="contactForm">
+                <h2>Have any Question? Send Me a Message</h2>
+                <form>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   
+    
+    </section>
+</body>
+</html>
