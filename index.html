@@ -168,7 +168,7 @@
             <!-- Hidden Contact Form -->
             <div class="contact-form" id="contactForm">
                 <h2>Have any Question? Send Me a Message</h2>
-                <form>
+                <form class="ctn__form" onsubmit="return showAlt()">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
@@ -176,6 +176,13 @@
                 </form>
             </div>
         </div>
+    <script>
+        function showAlt() {
+            alert("Your message has been sent");
+            return true;
+        }
+    
+    </script>
     </section>
 
    
